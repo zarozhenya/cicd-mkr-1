@@ -13,9 +13,15 @@ def sort_by_population(data, descending_order=False):
     return sorted(data, key=lambda x: x[2], reverse=descending_order)
 
 
+def sort_by_area(data, descending_order=False):
+    return sorted(data, key=lambda x: x[1], reverse=descending_order)
+
+
 if __name__ == '__main__':
     data_from_file = read_data_from_file('data.txt')
     print(data_from_file)
     sorted_data_by_population = sort_by_population(data_from_file, True)
     print(sorted_data_by_population)
+    sorted_data_by_area = sort_by_area(data_from_file, True)
+    print(sorted_data_by_area)
 
