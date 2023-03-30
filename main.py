@@ -20,7 +20,8 @@ def sort_by_area(data, descending_order=False):
 def pretty_print_the_data(data):
     counter = 1
     for item in data:
-        print(f'\nCountry {counter}\nName: {item[0]}\nArea: {item[1]}\nPopulation: {item[2]}\n')
+        print(f'\nCountry {counter}')
+        print(f'Name: {item[0]}\nArea: {item[1]}\nPopulation: {item[2]}\n')
         counter += 1
 
 
@@ -34,4 +35,3 @@ if __name__ == '__main__':
     sorted_data_by_area = sort_by_area(data_from_file, True)
     print('Sorted data from file by area\n==========')
     pretty_print_the_data(sorted_data_by_area)
-
