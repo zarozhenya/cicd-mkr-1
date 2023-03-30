@@ -19,10 +19,14 @@ def sort_by_area(data, descending_order=False):
 
 def pretty_print_the_data(data):
     counter = 1
+    messages = []
     for item in data:
-        print(f'\nCountry {counter}')
-        print(f'Name: {item[0]}\nArea: {item[1]}\nPopulation: {item[2]}\n')
+        message = f'\nCountry {counter}\nName: {item[0]}' \
+                  f'\nArea: {item[1]}\nPopulation: {item[2]}\n'
+        print(message)
+        messages.append(message)
         counter += 1
+    return messages
 
 
 if __name__ == '__main__':
