@@ -1,5 +1,15 @@
+def read_data_from_file(filename):
+    data = []
+    with open(filename, 'r') as file:
+        for line in file:
+            string_data = line.strip().split(', ')
+            string_data[1] = int(string_data[1])
+            string_data[2] = int(string_data[2])
+            data.append(string_data)
+    return data
 
 
 if __name__ == '__main__':
-    print('Hello world')
+    data_from_file = read_data_from_file('data.txt')
+    print(data_from_file)
 
